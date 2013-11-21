@@ -8,7 +8,7 @@ This assignment will have you producing your own implementation of a map. You wi
 
 ## The Files
 
-You are given three files - `map.h`, `map.c` and `test.c`.
+You are given two files - `map.h` and `map.c`.
 
 `map.h` contains all of the required function prototypes as well as two skeleton structs. You may add members to these structs as you see fit, depending on how you choose to implement your map. The only requirement is that your top-level map type be called `map_t`. Here are the provided structs:
 
@@ -23,8 +23,6 @@ typedef struct _map {
 ```
 
 `map.c` contains empty function definitions for each of the functions required for the assignment. 
-
-`test.c` contains unit tests built upon the provided API. You can run these whenever you'd like to test the functionality of your map. If your implementation works properly, all of the tests should pass. A fuller test suite will be run on the final assignment, so you should make sure to expand `test.c` if you think of any edge cases which are not being tested. 
 
 ## The Protos
 
@@ -53,4 +51,6 @@ void map_destroy(map_t* self);
 ```
 Cleans up the dictionary structure. May be empty if no cleanup is required. 
 
+## The Grade
 
+Your assignment will be compiled and run through an automated test suite. For this reason, it is *IMPERATIVE* that you stick to the guidelines and naming conventions. If you do not, your code will not interact properly with the tests and you will be injustly rewarded with a bad grade. 
