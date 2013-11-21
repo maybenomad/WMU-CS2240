@@ -6,6 +6,8 @@ A map or dictionary data structure is a key-value data store. Although the under
 
 This assignment will have you producing your own implementation of a map. You will be using this data structure throughout the course on various assignments, so it's very important that you take your time and render a working project. 
 
+The underlying implementation is unimportant, so long as it is reasonable. Under normal circumstances, this would likely be implemented as a hash table (such as Java's HashMap<K,V> utility class). For the purpose of this class, however, it will be fine to implement it as some sort of linked list, so long as this detail is hidden by the API. 
+
 ## The Files
 
 You are given two files - `map.h` and `map.c`.
