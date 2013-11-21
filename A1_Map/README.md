@@ -51,6 +51,6 @@ Removes the entry associated with the given key. Returns 0 on success.
 ```c
 void map_destroy(map_t* self);
 ```
-Cleans up the dictionary structure. May be entry if no cleanup is required. 
+Cleans up the dictionary structure. May be empty if no cleanup is required. 
 
 
