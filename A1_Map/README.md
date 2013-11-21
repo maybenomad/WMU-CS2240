@@ -28,7 +28,7 @@ typedef struct _map {
 
 ## The Protos
 
-The map itself will be passed as the first parameter to each of it's functions. This is a pattern that allows programmers to closely mimic object-oriented design patterns in C and is generally considered good practice for functions which operate on a particular data structure. 
+The map itself will be passed as the first parameter to each of its functions. This is a pattern that allows programmers to closely mimic object-oriented design patterns in C and is generally considered good practice for functions which operate on a particular data structure. 
 
 ```c
 void map_init(map_t* self);
