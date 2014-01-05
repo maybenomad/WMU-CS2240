@@ -57,7 +57,7 @@ void map_destroy(map_t* self);
 ```
 Cleans up the dictionary structure. May be empty if no cleanup is required. 
 
-### Part 2 (due on 1/23/14)
+### Part 2 (due on 1/21/14)
 
 ```c 
 int map_serialize(map_t* self, FILE* stream);
