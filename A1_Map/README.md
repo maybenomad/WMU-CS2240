@@ -30,6 +30,8 @@ typedef struct _map {
 
 The map itself will be passed as the first parameter to each of its functions. This is a pattern that allows programmers to closely mimic object-oriented design patterns in C and is generally considered good practice for functions which operate on a particular data structure. 
 
+### Part 1 (due on 1/16/14)
+
 ```c
 void map_init(map_t* self);
 ```
@@ -54,6 +56,21 @@ Removes the entry associated with the given key. Returns 0 on success.
 void map_destroy(map_t* self);
 ```
 Cleans up the dictionary structure. May be empty if no cleanup is required. 
+
+### Part 2 (due on 1/23/14)
+
+```c 
+int map_serialize(map_t* self, FILE* stream);
+```
+Iterates through all key/value pairs in the map and outputs them to the supplied file stream in the following format: 
+
+    key1:value1
+    key2:value2
+
+```c 
+int map_deserialize(map_t* self, FILE* stream);
+```
+Reads key value pairs in the K:V format above from the provided file stream and adds them all to map object. 
 
 ## The Grade
 
