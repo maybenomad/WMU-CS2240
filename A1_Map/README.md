@@ -8,6 +8,8 @@ This assignment will have you producing your own implementation of a map. You wi
 
 The underlying implementation is unimportant, so long as it is reasonable. Under normal circumstances, this would likely be implemented as a hash table (such as Java's HashMap<K,V> utility class). For the purpose of this class, however, it will be fine to implement it as some sort of linked list, so long as this detail is hidden by the API. 
 
+For a review of linked lists (in terms of C), you may want to check out [Stanford Linked List Basics](http://cslibrary.stanford.edu/103/LinkedListBasics.pdf). 
+
 ## The Files
 
 You are given two files - `map.h` and `map.c`.
@@ -16,7 +18,9 @@ You are given two files - `map.h` and `map.c`.
 
 ```c
 typedef struct _map_entry {
-      
+  const char* key;
+  const char* value;
+  map_entry_t* next;
 } map_entry_t;
 
 typedef struct _map {
