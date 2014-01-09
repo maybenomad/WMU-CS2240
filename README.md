@@ -76,7 +76,6 @@ int dumb_func() {
 ## Assignment Turn-in 
 - You must include your code (derp)
 - You must include a Makefile compatible with the GNU Make tool
-- You must include a PDF file containing all of your code, preferably syntax highlighted
 - The project you turn in should NOT have a pre-compiled executable
 - You must zip/tar up your working project and send it to **trenarycs224@gmail.com**  
 
