@@ -5,7 +5,8 @@ typedef struct _map_entry {
 } map_entry_t;
 
 typedef struct _map {
-  map_entry_t* entry;  
+  map_entry_t* entry;
+  int size;
 } map_t;
 
 // Part one functions.
