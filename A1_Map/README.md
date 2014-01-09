@@ -57,6 +57,29 @@ void map_destroy(map_t* self);
 ```
 Cleans up the dictionary structure. May be empty if no cleanup is required. 
 
+Here is a usage example to demonstrate how the class should be used: 
+
+```c
+map_t* cool_map = (map_t*) malloc(sizeof(map_t));
+
+map_init(cool_map);
+
+map_put(cool_map, "rofl", "copter");
+map_put(cool_map, "copter", "rofl");
+
+printf("%s\n", map_get(cool_map, "rofl"));
+// => copter
+
+const char* rofl = map_get(cool_map, "copter");
+
+map_remove(cool_map, "rofl");
+
+printf("%s\n", map_get(cool_map, "rofl"));
+// => NULL
+
+map_destroy(cool_map);
+```
+
 ### Part 2 (due on 1/21/14)
 
 ```c 
