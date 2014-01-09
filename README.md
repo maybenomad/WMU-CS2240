@@ -85,8 +85,7 @@ that you will be working on the command line with `gcc` and `make` even if you a
 
 If I try to build your project and there are errors unrelated to your code, you will not lose points.  
 
-Your assignment will be graded both on your coding style and the functionality of the program. After it is graded, you 
-will recieve a marked up version of your PDF back via e-mail along with your score. 
+Your assignment will be graded both on your coding style and the functionality of the program.
 
 ##Final Words
 Most of all - BE CONSISTENT. If you strongly disagree with some of the coding standards here, just choose your own and stick with it. The actual standards that you adhere to are not important, so long as you are consistent. You will not be marked down for not conforming to this document, but you WILL be marked down if I have to spend time reformatting your code just so I can read it. 
