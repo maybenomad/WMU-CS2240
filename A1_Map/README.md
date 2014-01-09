@@ -24,7 +24,8 @@ typedef struct _map_entry {
 } map_entry_t;
 
 typedef struct _map {
-  map_entry_t* entry;      
+  map_entry_t* entry; 
+  int size;
 } map_t;
 ```
 
@@ -55,6 +56,11 @@ Returns the value of the entry associated with the given key. If no value exists
 int map_remove(map_t* self, const char* key);
 ```
 Removes the entry associated with the given key. Returns 0 on success. 
+
+```c
+int map_size(map_t* self);
+```
+Returns the number of entries in the map. 
 
 ```c
 void map_destroy(map_t* self);
