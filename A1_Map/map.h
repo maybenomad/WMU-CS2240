@@ -14,8 +14,9 @@ void map_init(map_t*);
 int map_put(map_t*, const char*, const char*);
 const char* map_get(map_t*, const char*);
 int map_remove(map_t*, const char*);
+int map_size(map_t*);
 void map_destroy(map_t*);
 
 // Part two functions. 
-int map_serialize(map_t* self, FILE* stream);
-int map_deserialize(map_t* self, FILE* stream);
+int map_serialize(map_t*, FILE*);
+int map_deserialize(map_t*, FILE*);
