@@ -1,3 +1,5 @@
+#include <assert.h>
+
 void map_init(map_t* self) {
   
 }
