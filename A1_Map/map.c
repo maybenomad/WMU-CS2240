@@ -14,6 +14,11 @@ const char* map_get(map_t* self, const char* key) {
 
 }
 
+int map_size(map_t* self) {
+  assert(self != NULL);
+  
+}
+
 int map_remove(map_t* self, const char* key) {
   assert(self != NULL);
   
