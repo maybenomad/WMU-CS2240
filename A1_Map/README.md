@@ -70,8 +70,6 @@ map_put(cool_map, "copter", "rofl");
 printf("%s\n", map_get(cool_map, "rofl"));
 // => copter
 
-const char* rofl = map_get(cool_map, "copter");
-
 map_remove(cool_map, "rofl");
 
 printf("%s\n", map_get(cool_map, "rofl"));
