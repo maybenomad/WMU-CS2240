@@ -1,3 +1,6 @@
+#ifndef __A1_MAP_H__
+#define __A1_MAP_H__
+
 typedef struct _map_entry {
   char* key;
   char* value;
@@ -20,3 +23,5 @@ void map_destroy(map_t*);
 // Part two functions. 
 int map_serialize(map_t*, FILE*);
 int map_deserialize(map_t*, FILE*);
+
+#endif
