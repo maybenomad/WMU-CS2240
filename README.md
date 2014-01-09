@@ -25,7 +25,7 @@ All user-defined types should start with a capital letter and have a capital let
 Variables should be all lower-case with underscores separating words. `dumb_variable`, `other_dumb_variable`. 
 
 **Function Names**
-Function names should start with a capital letter and have a capital letter for each new word - no underscores. `HerpDerp()`, `DerpityHerpity()`. 
+Function names should be all lower-case with underscores separating words. `herp_derp()`, `derpity_herpity()`. 
 
 **Globals / Constants**
 Globals should rarely be used - and if they are, they should represent some time of compile-time constant (such as the width and height of a window, etc). They should be named using all capitals, with underscores. `CAPS_ARE_COOL`, `NO_UR_MOM_IS_COOL`. 
@@ -61,7 +61,7 @@ Use only spaces and indent 2 spaces at a time.
 //
 // This function does absolutely nothing. 
 //
-int DumbFunc() {
+int dumb_func() {
   int foo = Bar();
   if (foo == 0) {
     puts("Weeeeeeeee");
