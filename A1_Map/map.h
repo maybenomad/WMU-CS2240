@@ -1,6 +1,6 @@
 typedef struct _map_entry {
-  const char* key;
-  const char* value;
+  char* key;
+  char* value;
   map_entry_t* next;
 } map_entry_t;
 
