@@ -1,12 +1,10 @@
-typedef struct _map_entry
-{
+typedef struct _map_entry {
   const char* key;
   const char* value;
   map_entry_t* next;
 } map_entry_t;
 
-typedef struct _map 
-{
+typedef struct _map {
   map_entry_t* entry;  
 } map_t;
 
