@@ -70,7 +70,7 @@ Cleans up the dictionary structure. May be empty if no cleanup is required.
 Here is a usage example to demonstrate how the class should be used: 
 
 ```c
-map_t* cool_map = (map_t*) malloc(sizeof(map_t));
+map_t cool_map;
 
 map_init(cool_map);
 
