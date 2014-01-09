@@ -61,15 +61,12 @@ Use only spaces and indent 2 spaces at a time.
 //
 // This function does absolutely nothing. 
 //
-int DumbFunc() 
-{
+int DumbFunc() {
   int foo = Bar();
-  if (foo == 0) 
-  {
+  if (foo == 0) {
     puts("Weeeeeeeee");
   }
-  else 
-  {
+  else {
     puts("alaksdflkajsl");
   }
   return 1;
