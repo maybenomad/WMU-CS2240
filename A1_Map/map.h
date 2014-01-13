@@ -1,11 +1,12 @@
 #ifndef __A1_MAP_H__
 #define __A1_MAP_H__
 
-typedef struct _map_entry {
+typedef struct _map_entry map_entry_t;
+struct _map_entry {
   char* key;
   char* value;
   map_entry_t* next;
-} map_entry_t;
+};
 
 typedef struct _map {
   map_entry_t* entry;
