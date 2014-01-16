@@ -45,7 +45,7 @@ Initialize the dictionary structure. May be empty if no initialization logic is 
 ```c
 int map_put(map_t* self, const char* key, const char* val);
 ```
-Add an entry to the map with the provided key and value. Returns 0 on success.
+Add an entry to the map with the provided key and value. Returns OK on success, SYS_ERROR if an error occurred within a system call, and KEY_EXISTS if the key already exists. 
 
 ```c
 const char* map_get(map_t* self, const char* key);
@@ -55,7 +55,7 @@ Returns the value of the entry associated with the given key. If no value exists
 ```c
 int map_remove(map_t* self, const char* key);
 ```
-Removes the entry associated with the given key. Returns 0 on success. 
+Removes the entry associated with the given key. Returns OK on success, SYS_ERROR if an error occurred within a system call, and NO_KEY_EXISTS if the key does not exist. 
 
 ```c
 int map_size(map_t* self);
