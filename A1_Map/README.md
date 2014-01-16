@@ -17,11 +17,12 @@ You are given two files - `map.h` and `map.c`.
 `map.h` contains all of the required function prototypes as well as two skeleton structs. You may add members to these structs as you see fit, depending on how you choose to implement your map. The only requirement is that your top-level map type be called `map_t`. Here are the provided structs:
 
 ```c
-typedef struct _map_entry {
+typedef struct _map_entry map_entry_t;
+struct _map_entry {
   char* key;
   char* value;
   map_entry_t* next;
-} map_entry_t;
+};
 
 typedef struct _map {
   map_entry_t* entry; 
