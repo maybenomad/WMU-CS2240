@@ -103,7 +103,7 @@ You will also refactor your existing code to make use of the fancy new macros we
 ```c 
 int map_serialize(map_t* self, FILE* stream);
 ```
-Iterates through all key/value pairs in the map and outputs them to the supplied file stream in the following format: 
+Iterates through all key/value pairs in the map and outputs them to the supplied file stream in the above format. 
 
 ```c 
 int map_deserialize(map_t* self, FILE* stream);
