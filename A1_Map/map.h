@@ -1,6 +1,13 @@
 #ifndef __A1_MAP_H__
 #define __A1_MAP_H__
 
+#include <stdio.h>
+
+#define SYS_ERROR -1
+#define OK 0
+#define KEY_EXISTS 1
+#define NO_KEY_EXISTS 2
+
 typedef struct _map_entry map_entry_t;
 struct _map_entry {
   char* key;
