@@ -8,6 +8,9 @@
 #define KEY_EXISTS 1
 #define NO_KEY_EXISTS 2
 
+// Strange type definition due to the recursive nature
+//   of the struct. This technique is called 'forward
+//   declaration' and is necessary for compilation reasons.
 typedef struct _map_entry map_entry_t;
 struct _map_entry {
   char* key;
