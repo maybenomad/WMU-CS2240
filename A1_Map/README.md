@@ -90,13 +90,19 @@ map_destroy(cool_map);
 
 ### Part 2 (due on 1/21/14)
 
+For part two, you will be required to implement serialization and deserialization functions for your data structure. These will read/write the keys and values stored in your dictionary in a super special proprietary format: 
+
+    key1:value1
+    key2:value2
+    
+Specifically, the key and value will be colon separated and each entry will be stored on a new line. 
+
+You will also refactor your existing code to make use of the fancy new macros we created with the `#define` preprocessor directive. The prototype descriptions above have been modified accordingly. 
+
 ```c 
 int map_serialize(map_t* self, FILE* stream);
 ```
 Iterates through all key/value pairs in the map and outputs them to the supplied file stream in the following format: 
-
-    key1:value1
-    key2:value2
 
 ```c 
 int map_deserialize(map_t* self, FILE* stream);
