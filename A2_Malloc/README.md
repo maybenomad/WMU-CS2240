@@ -1,4 +1,4 @@
-# A2: BYOM (Bring Your Own Malloc)
+# A2: BYOB (Bring Your Own Bytes)
 
 ## The Assignment
 For most programmers, memory allocation is seen as some sort of black magic. In Java, the JVM takes care of allocation automatically and has a complex garbage collector to handle deallocation. Scripting languages such as Python and Ruby also have complex object management systems. Even in C, it is easy to simply call `malloc` and `free` without giving too much thought to what happens behind the scenes. 
