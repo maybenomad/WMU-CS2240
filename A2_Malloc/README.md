@@ -25,11 +25,11 @@ void* nu_calloc(size_t count, size_t size);
 ```
 
 ```c
-void* nu_realloc(void *ptr, size_t size);
+void* nu_realloc(void* ptr, size_t size);
 ```
 
 ```c
-void nu_free(void *ptr);
+void nu_free(void* ptr);
 ```
 
 ### Due: February 4th, 2014
