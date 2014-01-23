@@ -3,7 +3,7 @@
 ## The Assignment
 For most programmers, memory allocation is seen as some sort of black magic. In Java, the JVM takes care of allocation automatically and has a complex garbage collector to handle deallocation. Scripting languages such as Python and Ruby also have complex object management systems. Even in C, it is easy to simply call `malloc` and `free` without giving too much thought to what happens behind the scenes. 
 
-In this assignment, you'll be tasked with implementing your own memory management scheme, namely re-building the Unix system calls `malloc`, `calloc`, `realloc`, and `free`. It should go without saying that you must accomplish this without actually using any of the original libc syscalls. 
+In this assignment, you'll be tasked with implementing your own memory management scheme, namely re-building the Unix system calls `malloc`, `calloc`, `realloc`, and `free`. It should go without saying that you must accomplish this without actually using any of the original libc calls. 
 
 ## The Files
 Not much explanation here. A basic header and implementation file are provided. Fill them in. 
