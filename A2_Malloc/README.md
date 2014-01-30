@@ -5,7 +5,7 @@ For most programmers, memory allocation is seen as some sort of black magic. In 
 
 In this assignment, you'll be tasked with implementing your own memory management scheme, namely re-building the Unix system calls `malloc`, `calloc`, `realloc`, and `free`. It should go without saying that you must accomplish this without actually using any of the original libc calls. 
 
-What you *will* be able to use, however, is a system call named `sbrk()`. This system call takes a `size_t size` then pushed the heap break down the heap by that many bytes. It then returns a pointer to the old position of the break, effectively giving you a pointer to a new chunk of allocated space `size` bytes long. 
+What you *will* be able to use, however, is a system call named `sbrk()`. This system call takes a `size_t size`, pushing the heap break down the heap by that many bytes. It then returns a pointer to the break's old position, effectively giving you a pointer to a new chunk of allocated space `size` bytes long. (For help visualizing this, search for more information on the layout of the heap).
 
 Your library will be responsible for utilizing `sbrk()` as well as performing book-keeping with regards to what memory has been allocated by the user and what memory is free. 
 
