@@ -52,6 +52,19 @@ The simplest way to do this involves building a linked-list-esque structure out 
     
 Each chunk of memory will be preceded by a struct containing metadata about that chunk. This metadata will form a linked list which spans from the beginning of the heap to the last chunk of memory that is available (with respect to the heap break). 
 
+The struct will therefore look something like this: 
+
+```c
+typedef struct _heap_block heap_block;
+struct _heap_block {
+  int size;
+  int free;
+  heap_block* next;
+};
+```
+
+In this scheme, `size` will contain the size (in bytes) of the block of memory, `free` will be either 0 or non-zero (0 meaning the memory is free, non-zero meaning it is allocated) and `next` will be a pointer to the next block of memory. By populating this struct with relevant data and placing an instance before each block of data, we will have solved the problem of indexing the heap and storing data about individual chunks in one fell swoop!
+
 ## The Files
 Not much explanation here. A basic header and implementation file are provided. Fill them in. 
 
@@ -85,3 +98,5 @@ void nu_free(void* ptr);
 Your assignment will be compiled and run through an automated test suite. For this reason, it is IMPERATIVE that you stick to the guidelines and naming conventions. If you do not, your code will not interact properly with the tests and you will be injustly rewarded with a bad grade.
 
 In this assignment specifically, your program will be [ptraced](http://linux.die.net/man/2/ptrace) in order to ensure that proper memory allocation and deallocation techniques were performed. This automated grader is smart. ;)
+
+If you do anything clever in terms of bookkeeping, make sure to make note of it when you turn in your assignment! Extra points may be awarded for above-average implementations. 
