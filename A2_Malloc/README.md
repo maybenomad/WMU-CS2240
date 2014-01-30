@@ -25,14 +25,32 @@ The goal of said bookkeeping is to keep track of what memory on the heap has bee
 The simplest way to do this involves building a linked-list-esque structure out of the heap. 
 
     -------------------------------
-    |                             |
-    |                             |
-    |                             |
-    |                             |
-    |                             |
-    |                             |
-    |                             |
-    |                             |
+    |          METADATA           |--
+    ------------------------------- |
+    |                             | |
+    |                             | |
+    |         ALLOCATED           | |
+    |           CHUNK             | |
+    |                             | |
+    ------------------------------- |
+    |          METADATA           |<|
+    ------------------------------- |
+    |                             | |
+    |                             | |
+    |           FREE              | |
+    |           CHUNK             | |
+    |                             | |
+    ------------------------------- |
+    |          METADATA           |<|
+    ------------------------------- 
+    |                             | 
+    |                             | 
+    |         ALLOCATED           | 
+    |           CHUNK             | 
+    |                             | 
+    ------------------------------- 
+    
+Each chunk of memory will be preceded by a struct containing metadata about that chunk. This metadata will form a linked list which spans from the beginning of the heap to the last chunk of memory that is available (with respect to the heap break). 
 
 ## The Files
 Not much explanation here. A basic header and implementation file are provided. Fill them in. 
