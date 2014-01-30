@@ -7,7 +7,32 @@ In this assignment, you'll be tasked with implementing your own memory managemen
 
 What you *will* be able to use, however, is a system call named `sbrk()`. This system call takes a `size_t size`, pushing the heap break down the heap by that many bytes. It then returns a pointer to the break's old position, effectively giving you a pointer to a new chunk of allocated space `size` bytes long. (For help visualizing this, search for more information on the layout of the heap).
 
-Your library will be responsible for utilizing `sbrk()` as well as performing book-keeping with regards to what memory has been allocated by the user and what memory is free. 
+A malloc implementation could therefore be as simple as this:
+
+```c
+void* malloc(size_t size) {
+  return sbrk(size);
+}
+
+void free(void* ptr) {
+}
+```
+
+Unfortunately, this is a terrible implementation. If we simply move the heap break every time we need new space, we will eventually overrun the bounds of the heap and cause the program to crash. Due to this, a good memory management library must do some bookkeeping. 
+
+The goal of said bookkeeping is to keep track of what memory on the heap has been allocated and what memory is free. When a user requests more memory, we must hand him/her a pointer to a sufficient amount of memory and then remember that this chunk of memory is in use. When the user requests that a chunk of memory be freed, we must be able to check that the pointer actually references a chunk of memory that we previously allocated and then mark that chunk as free (so it can be reused). 
+
+The simplest way to do this involves building a linked-list-esque structure out of the heap. 
+
+    -------------------------------
+    |                             |
+    |                             |
+    |                             |
+    |                             |
+    |                             |
+    |                             |
+    |                             |
+    |                             |
 
 ## The Files
 Not much explanation here. A basic header and implementation file are provided. Fill them in. 
