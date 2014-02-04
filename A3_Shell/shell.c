@@ -3,7 +3,9 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-int shell() 
+#include "shell.h"
+
+void shell() 
 {
 	while (1)
 	{
@@ -37,8 +39,4 @@ int shell()
 		// Free memory allocated by getline(). 
 		free(input);
 	}
-}
-
-int main() {
-	shell();
 }

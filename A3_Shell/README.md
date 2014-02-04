@@ -16,6 +16,13 @@ After input has been received, it must be tokenized on spaces so that you may ef
 ### Commands
 There are two types of commands: builtins and non. Builtin commands are handled directly by the shell executable itself. Non-builtin commands must be handled by external executables. 
 
+## The Files
+You have been provided with `shell.c` which provides you with a rudimentary shell. It does not actually do anything other than loop and collect user input. 
+
+You should split up the functionality of your shell into various functions. Seriously. **DO NOT WRITE YOUR ENTIRE SHELL IN THE `shell()` FUNCTION.** Not only is this terrible practice, this project requires a lot of code and it will be far too easy to muck something up. 
+
+You do not need a header file in this assignment, although you certainly may provide one if you wish. 
+
 ## The Specs
 **Builtins:** You should implement `echo`, `cd` and `exit` as builtins. 
 
@@ -30,4 +37,4 @@ There are two types of commands: builtins and non. Builtin commands are handled 
 ### Due: February 18th, 2014
 
 ## The Grade
-Your assignment will be compiled and run through an automated test suite. For this reason, it is IMPERATIVE that you stick to the guidelines and naming conventions. If you do not, your code will not interact properly with the tests and you will be injustly rewarded with a bad grade.
+As usual, your assignment will be compiled and run through an automated test suite. Ensure that you don't mangle the prototype of the `shell()` function. 
