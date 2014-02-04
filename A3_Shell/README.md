@@ -26,7 +26,7 @@ You do not need a header file in this assignment, although you certainly may pro
 ## The Specs
 **Builtins:** You should implement `echo`, `cd` and `exit` as builtins. 
 
-**Non-builtins:** Your shell should be able to execute any external executable via the `execve()` command. 
+**Non-builtins:** Your shell should be able to execute any external executable via the `execvp()` command. 
 
 **Piping:** You should be able to handle an arbitrary amount of pipes. 
 
