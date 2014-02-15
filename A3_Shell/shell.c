@@ -26,7 +26,7 @@ void shell()
 		// Parent process.  
 		if (pid != 0) 
 		{
-			wait(&pid);
+			wait(NULL);
 		} 
 		else // Child process
 		{
