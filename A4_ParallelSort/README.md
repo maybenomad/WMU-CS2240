@@ -27,8 +27,14 @@ You can write your own sort if you'd like, but since that's not relevant to the 
 
 Note that this function takes a function pointer as an argument. This is a pointer to another function in memory which is used to compare elements in the array. You will learn more about how this works in class. 
 
-# Makefile
+## Makefile
 Your makefile should produce an executable which takes one argument (a directory path) and performs a sort on the files located in that directory. Make sure that you are processing this argument in a fashion that finds the directory relative to the current working directory. (e.g., if you execute `./coolsort "./nested/directory/structure"`, everything in the subdirectory "structure" should be sorted). 
 
+## Output
+The output should be a single ASCII file called `sorted.yay` containing all of the records from each individual data file in sorted order. 
 
+## Other Things
+I am not responsible for anything that you may find at any of the domain names in the test data. 
+
+Good luck and have fun. 
 
