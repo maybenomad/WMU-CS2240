@@ -16,3 +16,11 @@ After the new process has been created, the server is responsible for reading da
 Now that the GET request has been parsed, you can look up the file that is being requested. If the server can locate the file, it should form an appropriate response header and serve file back to the client with a 200 response code. If it can't find it, it should return a 404 response code. If there is some other kind of error, just throw a 500 response code. 
 
 Note that you should support enough of the HTTP protocol to allow a web browser to navigate to the port your server is running on and successfully get a file. [This article](http://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/http_basics.html) should help you with that. 
+
+## Profiling Your Server
+After you have a working server (or before, doesn't really matter), you should write a client program to test your web server and gather various statistics on its performance. The statistics you collect are really up to you, but I recommend testing throughput (requests/second), the length of an average successful request vs. an unsuccessful one, and request time vs. file size. *You can write the client in any language.* Merry Christmas. 
+
+After you have gathered a solid amount of statistics, you should write a short paper on your server's performance. Point out bottlenecks and analyze the data that you've gathered, as well as coming up with a few suggestions on how you may be able to increase performance. This doesn't have to be a thesis, but it should be a solid analysis of what you've done. 
+
+## Grading
+You will be graded based on your paper, the elegance of your code, and a small test. I will run your web server on some port and then visit that location with my web browser. When I do so, I expect to see the sample `index.html` file rendered in the browser. I will then look for a file that doesn't exist and expect a 404 in return. As long as both of these things work, you're all set. 
